@@ -3,7 +3,7 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 import '../main.dart';
-import '../model/shoe_type.dart';
+import '../model/scrap_type.dart';
 import '../view/admin/admin_root_screen.dart';
 import '../view/common_view/profile_screen.dart';
 import '../view/customer/customer_home/customer_root_screen.dart';
@@ -74,18 +74,18 @@ class CommonFunc {
     }
   }
 
-  static ShoeType getShoeTypeByName(String shoeType) {
-    switch (shoeType) {
+  static ScrapType getScrapTypeByName(String scrapType) {
+    switch (scrapType) {
       case "giay":
-        return ShoeType.giay;
+        return ScrapType.giay;
       case "nhua":
-        return ShoeType.nhua;
+        return ScrapType.nhua;
       case "kim_loai":
-        return ShoeType.kim_loai;
+        return ScrapType.kim_loai;
       case "thuy_tinh":
-        return ShoeType.thuy_tinh;
+        return ScrapType.thuy_tinh;
       default:
-        return ShoeType.khac;
+        return ScrapType.khac;
     }
   }
 

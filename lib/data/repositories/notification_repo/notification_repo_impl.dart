@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:giaydep_app/utils/Constants.dart';
+import 'package:three_tapp_app/utils/Constants.dart';
 
 import '../../../model/fcm.dart';
 import '../../../utils/common_func.dart';

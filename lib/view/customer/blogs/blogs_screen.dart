@@ -1,7 +1,7 @@
 import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:giaydep_app/view/customer/blogs/post_item.dart';
+import 'package:three_tapp_app/view/customer/blogs/post_item.dart';
 
 import '../../../main.dart';
 import '../../../model/status.dart';

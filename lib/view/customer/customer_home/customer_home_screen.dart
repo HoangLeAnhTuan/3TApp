@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:giaydep_app/main.dart';
-import 'package:giaydep_app/view/customer/cart/cart_screen.dart';
+import 'package:three_tapp_app/main.dart';
+import 'package:three_tapp_app/view/customer/cart/cart_screen.dart';
 
 import '../../../model/product.dart';
 import '../../../model/status.dart';
@@ -131,7 +131,7 @@ class _CustomerHomeScreen extends State<CustomerHomeScreen> {
                                       fontStyle: FontStyle.italic),
                                 ),
                                 productViewModel.listGiay.isNotEmpty
-                                    ? listShoeByType(
+                                    ? listScrapByType(
                                         productViewModel.listGiay)
                                     : Padding(
                                         padding: const EdgeInsets.all(8.0),
@@ -150,7 +150,7 @@ class _CustomerHomeScreen extends State<CustomerHomeScreen> {
                                       fontStyle: FontStyle.italic),
                                 ),
                                 productViewModel.listNhua.isNotEmpty
-                                    ? listShoeByType(productViewModel.listNhua)
+                                    ? listScrapByType(productViewModel.listNhua)
                                     : Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: Text(
@@ -168,7 +168,7 @@ class _CustomerHomeScreen extends State<CustomerHomeScreen> {
                                       fontStyle: FontStyle.italic),
                                 ),
                                 productViewModel.listKimLoai.isNotEmpty
-                                    ? listShoeByType(
+                                    ? listScrapByType(
                                         productViewModel.listKimLoai)
                                     : Padding(
                                         padding: const EdgeInsets.all(8.0),
@@ -187,7 +187,7 @@ class _CustomerHomeScreen extends State<CustomerHomeScreen> {
                                       fontStyle: FontStyle.italic),
                                 ),
                                 productViewModel.listKimLoai.isNotEmpty
-                                    ? listShoeByType(
+                                    ? listScrapByType(
                                         productViewModel.listThuytinh)
                                     : Padding(
                                         padding: const EdgeInsets.all(8.0),
@@ -206,7 +206,7 @@ class _CustomerHomeScreen extends State<CustomerHomeScreen> {
                                       fontStyle: FontStyle.italic),
                                 ),
                                 productViewModel.listGiayKhac.isNotEmpty
-                                    ? listShoeByType(
+                                    ? listScrapByType(
                                         productViewModel.listGiayKhac)
                                     : Padding(
                                         padding: const EdgeInsets.all(8.0),
@@ -245,7 +245,7 @@ class _CustomerHomeScreen extends State<CustomerHomeScreen> {
     );
   }
 
-  Widget listShoeByType(List<Product> sendas) {
+  Widget listScrapByType(List<Product> sendas) {
     return SizedBox(
       height: 240,
       child: ListView.builder(

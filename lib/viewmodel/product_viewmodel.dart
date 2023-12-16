@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:giaydep_app/model/shoe_type.dart';
+import 'package:three_tapp_app/model/scrap_type.dart';
 import 'package:rxdart/rxdart.dart';
 
 import '../base/baseviewmodel/base_viewmodel.dart';
@@ -122,13 +122,13 @@ class ProductViewModel extends BaseViewModel {
 
     //filter
     for (var element in products) {
-      if (element.type == ShoeType.giay.toShortString()) {
+      if (element.type == ScrapType.giay.toShortString()) {
         listGiay.add(element);
-      } else if (element.type == ShoeType.nhua.toShortString()) {
+      } else if (element.type == ScrapType.nhua.toShortString()) {
         listNhua.add(element);
-      } else if (element.type == ShoeType.kim_loai.toShortString()) {
+      } else if (element.type == ScrapType.kim_loai.toShortString()) {
         listKimLoai.add(element);
-      } else if (element.type == ShoeType.thuy_tinh.toShortString()) {
+      } else if (element.type == ScrapType.thuy_tinh.toShortString()) {
         listThuytinh.add(element);
       } else {
         listGiayKhac.add(element);

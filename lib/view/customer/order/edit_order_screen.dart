@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:giaydep_app/model/order_status.dart';
-import 'package:giaydep_app/viewmodel/cart_viewmodel.dart';
+import 'package:three_tapp_app/model/order_status.dart';
+import 'package:three_tapp_app/viewmodel/cart_viewmodel.dart';
 
 import '../../../main.dart';
 import '../../../model/my_order.dart';
