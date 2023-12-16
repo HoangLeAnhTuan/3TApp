@@ -133,8 +133,8 @@ class _CustomerHomeScreen extends State<CustomerHomeScreen> {
                                 productViewModel.listGiay.isNotEmpty
                                     ? listScrapByType(
                                         productViewModel.listGiay)
-                                    : Padding(
-                                        padding: const EdgeInsets.all(8.0),
+                                    : const Padding(
+                                        padding: EdgeInsets.all(8.0),
                                         child: Text(
                                           'Không có dữ liệu',
                                           style: TextStyle(
@@ -151,8 +151,8 @@ class _CustomerHomeScreen extends State<CustomerHomeScreen> {
                                 ),
                                 productViewModel.listNhua.isNotEmpty
                                     ? listScrapByType(productViewModel.listNhua)
-                                    : Padding(
-                                        padding: const EdgeInsets.all(8.0),
+                                    : const Padding(
+                                        padding: EdgeInsets.all(8.0),
                                         child: Text(
                                           'Không có dữ liệu',
                                           style: TextStyle(
@@ -170,8 +170,8 @@ class _CustomerHomeScreen extends State<CustomerHomeScreen> {
                                 productViewModel.listKimLoai.isNotEmpty
                                     ? listScrapByType(
                                         productViewModel.listKimLoai)
-                                    : Padding(
-                                        padding: const EdgeInsets.all(8.0),
+                                    : const Padding(
+                                        padding: EdgeInsets.all(8.0),
                                         child: Text(
                                           'Không có dữ liệu',
                                           style: TextStyle(
@@ -189,8 +189,8 @@ class _CustomerHomeScreen extends State<CustomerHomeScreen> {
                                 productViewModel.listKimLoai.isNotEmpty
                                     ? listScrapByType(
                                         productViewModel.listThuytinh)
-                                    : Padding(
-                                        padding: const EdgeInsets.all(8.0),
+                                    : const Padding(
+                                        padding: EdgeInsets.all(8.0),
                                         child: Text(
                                           'Không có dữ liệu',
                                           style: TextStyle(
@@ -208,8 +208,8 @@ class _CustomerHomeScreen extends State<CustomerHomeScreen> {
                                 productViewModel.listGiayKhac.isNotEmpty
                                     ? listScrapByType(
                                         productViewModel.listGiayKhac)
-                                    : Padding(
-                                        padding: const EdgeInsets.all(8.0),
+                                    : const Padding(
+                                        padding: EdgeInsets.all(8.0),
                                         child: Text(
                                           'Không có dữ liệu',
                                           style: TextStyle(

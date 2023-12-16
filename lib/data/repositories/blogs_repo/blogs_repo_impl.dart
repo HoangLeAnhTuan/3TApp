@@ -55,7 +55,7 @@ class BlogsRepoImpl with BlogsRepo {
         FirebaseFirestore.instance.collection('POSTS').doc(post.id).set(postMap);
 
         return Future.value(true);
-      } on FirebaseException catch (e) {
+      } on FirebaseException {
         CommonFunc.showToast("Đã có lỗi xảy ra.");
       } catch (e) {
         CommonFunc.showToast("Đã có lỗi xảy ra.");
@@ -82,7 +82,7 @@ class BlogsRepoImpl with BlogsRepo {
             return Future.value(false);
           });
         return Future.value(true);
-      } on FirebaseException catch (e) {
+      } on FirebaseException {
         CommonFunc.showToast("Đã có lỗi xảy ra.");
       } catch (e) {
         CommonFunc.showToast("Đã có lỗi xảy ra.");
@@ -121,7 +121,7 @@ class BlogsRepoImpl with BlogsRepo {
         FirebaseFirestore.instance.collection('POSTS').doc(post.id).update(postMap);
 
         return Future.value(true);
-      } on FirebaseException catch (e) {
+      } on FirebaseException {
         CommonFunc.showToast("Đã có lỗi xảy ra.");
       } catch (e) {
         CommonFunc.showToast("Đã có lỗi xảy ra.");
@@ -143,7 +143,7 @@ class BlogsRepoImpl with BlogsRepo {
 
         FirebaseFirestore.instance.collection('POSTS').doc(post.id).update(postMap);
         return Future.value(true);
-      } on FirebaseException catch (e) {
+      } on FirebaseException {
         CommonFunc.showToast("Đã có lỗi xảy ra.");
       } catch (e) {
         CommonFunc.showToast("Đã có lỗi xảy ra.");
@@ -158,7 +158,7 @@ class BlogsRepoImpl with BlogsRepo {
       try {
         //delete image
         final storageRef = FirebaseStorage.instance.ref();
-        await storageRef.child('post_images/${postId}.jpg').delete();
+        await storageRef.child('post_images/$postId.jpg').delete();
       } on FirebaseException catch (e) {
         print("code:${e.code},data:${e.message}");
         if (e.code == "object-not-found") {

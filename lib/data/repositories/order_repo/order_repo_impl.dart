@@ -38,7 +38,7 @@ class OrderRepoImpl with OrderRepo {
         return Future.value(false);
       });
       return Future.value(true);
-    } on FirebaseException catch (e) {
+    } on FirebaseException {
       CommonFunc.showToast("Đã có lỗi xảy ra.");
     } catch (e) {
       CommonFunc.showToast("Đã có lỗi xảy ra.");
@@ -108,7 +108,7 @@ class OrderRepoImpl with OrderRepo {
           .doc(orderId)
           .update(orderMap);
       return Future.value(true);
-    } on FirebaseException catch (e) {
+    } on FirebaseException {
       CommonFunc.showToast("Đã có lỗi xảy ra.");
     } catch (e) {
       CommonFunc.showToast("Đã có lỗi xảy ra.");
@@ -135,7 +135,7 @@ class OrderRepoImpl with OrderRepo {
           .doc(newOrder.id)
           .update(orderMap);
       return Future.value(true);
-    } on FirebaseException catch (e) {
+    } on FirebaseException {
       CommonFunc.showToast("Đã có lỗi xảy ra.");
     } catch (e) {
       CommonFunc.showToast("Đã có lỗi xảy ra.");

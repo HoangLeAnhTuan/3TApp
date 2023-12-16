@@ -55,13 +55,13 @@ class _PostItem extends State<PostItem> {
 
   showDialogConfirmDeletePost() {
     Widget noButton = TextButton(
-      child: Text("Không"),
+      child: const Text("Không"),
       onPressed: () {
         Navigator.of(context).pop();
       },
     );
     Widget yesButton = TextButton(
-      child: Text("Có"),
+      child: const Text("Có"),
       onPressed: () {
         postViewModel.deletePost(postId: widget.post.id);
         Navigator.of(context).pop();
@@ -69,7 +69,7 @@ class _PostItem extends State<PostItem> {
     );
 
     AlertDialog alert = AlertDialog(
-      content: Text("Bạn có chắc muốn xóa bài viết này?", textAlign: TextAlign.center),
+      content: const Text("Bạn có chắc muốn xóa bài viết này?", textAlign: TextAlign.center),
       actions: [
         noButton,
         yesButton,
@@ -138,11 +138,11 @@ class _PostItem extends State<PostItem> {
                         children: [
                           Text(
                             widget.post.authorName,
-                            style: TextStyle(color: Colors.black, fontSize: 12, fontWeight: FontWeight.bold),
+                            style: const TextStyle(color: Colors.black, fontSize: 12, fontWeight: FontWeight.bold),
                           ),
                           Text(
                             widget.post.createDate,
-                            style: TextStyle(color: Colors.grey, fontSize: 10),
+                            style: const TextStyle(color: Colors.grey, fontSize: 10),
                           ),
                         ],
                       )),

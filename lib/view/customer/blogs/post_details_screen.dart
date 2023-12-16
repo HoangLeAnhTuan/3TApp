@@ -52,7 +52,7 @@ class _BlogsDetailsScreen extends State<PostDetailsScreen> {
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: Colors.black,
                         fontSize: 16,
                         fontWeight: FontWeight.bold)),
@@ -65,7 +65,7 @@ class _BlogsDetailsScreen extends State<PostDetailsScreen> {
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 widget.post.content,
-                style: TextStyle(
+                style: const TextStyle(
                     color: Colors.black,
                     fontSize: 14,),
               ),
@@ -76,14 +76,14 @@ class _BlogsDetailsScreen extends State<PostDetailsScreen> {
                 children: [
                   Text(
                     "Đăng bởi:${widget.post.authorName}",
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.black54,
                       fontSize: 10,),
                   ),
                   const Spacer(),
                   Text(
                     "Ngày đăng:${widget.post.createDate}",
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.black54,
                       fontSize: 10,),
                   ),
