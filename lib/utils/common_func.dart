@@ -61,14 +61,12 @@ class CommonFunc {
 
   static String getSenDaNameByType(String sendaType) {
     switch (sendaType) {
-      case "the_thao":
-        return "Thể thao";
+      case "giay":
+        return "Giấy";
       case "da":
         return "Da";
-      case "cao_got":
-        return "Cao gót";
-      case "phe_lieu":
-        return "Phế liệu";
+      case "kim_loai":
+        return "Kim loại";
       default:
         return "Khác";
     }
@@ -76,14 +74,12 @@ class CommonFunc {
 
   static ShoeType getShoeTypeByName(String shoeType) {
     switch (shoeType) {
-      case "the_thao":
-        return ShoeType.the_thao;
-      case "da":
-        return ShoeType.da;
-      case "cao_got":
-        return ShoeType.cao_got;
-      case "phe_lieu":
-        return ShoeType.phe_lieu;
+      case "giay":
+        return ShoeType.giay;
+      case "nhua":
+        return ShoeType.nhua;
+      case "kim_loai":
+        return ShoeType.kim_loai;
       default:
         return ShoeType.khac;
     }

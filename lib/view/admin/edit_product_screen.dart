@@ -47,10 +47,9 @@ class _EditProductScreen extends State<EditProductScreen> {
   }
 
   List<ShoeType> productType = [
-    ShoeType.the_thao,
-    ShoeType.da,
-    ShoeType.cao_got,
-    ShoeType.phe_lieu,
+    ShoeType.giay,
+    ShoeType.nhua,
+    ShoeType.kim_loai,
     ShoeType.khac
   ];
 

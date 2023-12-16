@@ -1,4 +1,4 @@
-enum ShoeType { the_thao, da, cao_got, phe_lieu, khac }
+enum ShoeType { giay, nhua, kim_loai, khac }
 
 extension ParseToString on ShoeType {
   String toShortString() {

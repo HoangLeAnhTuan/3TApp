@@ -28,9 +28,9 @@ class ProductViewModel extends BaseViewModel {
   RolesType rolesType = RolesType.none;
 
   List<Product> products = [];
-  List<Product> listTheThao = [];
-  List<Product> listDa = [];
-  List<Product> listCaoGot = [];
+  List<Product> listGiay = [];
+  List<Product> listNhua = [];
+  List<Product> listKimLoai = [];
   List<Product> listBoot = [];
   List<Product> listGiayKhac = [];
 
@@ -109,9 +109,9 @@ class ProductViewModel extends BaseViewModel {
   }
 
   void clearAllList() {
-    listTheThao.clear();
-    listDa.clear();
-    listCaoGot.clear();
+    listGiay.clear();
+    listNhua.clear();
+    listKimLoai.clear();
     listBoot.clear();
     listGiayKhac.clear();
   }
@@ -122,14 +122,12 @@ class ProductViewModel extends BaseViewModel {
 
     //filter
     for (var element in products) {
-      if (element.type == ShoeType.the_thao.toShortString()) {
-        listTheThao.add(element);
-      } else if (element.type == ShoeType.da.toShortString()) {
-        listDa.add(element);
-      } else if (element.type == ShoeType.cao_got.toShortString()) {
-        listCaoGot.add(element);
-      } else if (element.type == ShoeType.phe_lieu.toShortString()) {
-        listBoot.add(element);
+      if (element.type == ShoeType.giay.toShortString()) {
+        listGiay.add(element);
+      } else if (element.type == ShoeType.nhua.toShortString()) {
+        listNhua.add(element);
+      } else if (element.type == ShoeType.kim_loai.toShortString()) {
+        listKimLoai.add(element);
       } else {
         listGiayKhac.add(element);
       }

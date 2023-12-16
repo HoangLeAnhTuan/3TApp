@@ -123,16 +123,16 @@ class _CustomerHomeScreen extends State<CustomerHomeScreen> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 const Text(
-                                  "Giày thể thao",
+                                  "Giấy",
                                   style: TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 14,
                                       fontStyle: FontStyle.italic),
                                 ),
-                                productViewModel.listTheThao.isNotEmpty
+                                productViewModel.listGiay.isNotEmpty
                                     ? listShoeByType(
-                                        productViewModel.listTheThao)
+                                        productViewModel.listGiay)
                                     : Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: Text(
@@ -142,15 +142,15 @@ class _CustomerHomeScreen extends State<CustomerHomeScreen> {
                                         ),
                                       ),
                                 const Text(
-                                  "Giày da",
+                                  "Nhựa",
                                   style: TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 14,
                                       fontStyle: FontStyle.italic),
                                 ),
-                                productViewModel.listDa.isNotEmpty
-                                    ? listShoeByType(productViewModel.listDa)
+                                productViewModel.listNhua.isNotEmpty
+                                    ? listShoeByType(productViewModel.listNhua)
                                     : Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: Text(
@@ -160,34 +160,16 @@ class _CustomerHomeScreen extends State<CustomerHomeScreen> {
                                         ),
                                       ),
                                 const Text(
-                                  "Giày cao gót",
+                                  "Kim loại",
                                   style: TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 14,
                                       fontStyle: FontStyle.italic),
                                 ),
-                                productViewModel.listCaoGot.isNotEmpty
+                                productViewModel.listKimLoai.isNotEmpty
                                     ? listShoeByType(
-                                        productViewModel.listCaoGot)
-                                    : Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Text(
-                                          'Không có dữ liệu',
-                                          style: TextStyle(
-                                              fontSize: 12, color: Colors.grey),
-                                        ),
-                                      ),
-                                const Text(
-                                  "Boot",
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 14,
-                                      fontStyle: FontStyle.italic),
-                                ),
-                                productViewModel.listBoot.isNotEmpty
-                                    ? listShoeByType(productViewModel.listBoot)
+                                        productViewModel.listKimLoai)
                                     : Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: Text(
