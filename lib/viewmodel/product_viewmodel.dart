@@ -31,7 +31,7 @@ class ProductViewModel extends BaseViewModel {
   List<Product> listGiay = [];
   List<Product> listNhua = [];
   List<Product> listKimLoai = [];
-  List<Product> listBoot = [];
+  List<Product> listThuytinh = [];
   List<Product> listGiayKhac = [];
 
   final StreamController<Status> getProductController =
@@ -112,7 +112,7 @@ class ProductViewModel extends BaseViewModel {
     listGiay.clear();
     listNhua.clear();
     listKimLoai.clear();
-    listBoot.clear();
+    listThuytinh.clear();
     listGiayKhac.clear();
   }
 
@@ -122,14 +122,14 @@ class ProductViewModel extends BaseViewModel {
 
     //filter
     for (var element in products) {
-      if (element.type == ShoeType.the_thao.toShortString()) {
-        listTheThao.add(element);
-      } else if (element.type == ShoeType.da.toShortString()) {
-        listDa.add(element);
-      } else if (element.type == ShoeType.cao_got.toShortString()) {
-        listCaoGot.add(element);
-      } else if (element.type == ShoeType.phe_lieu.toShortString()) {
-        listBoot.add(element);
+      if (element.type == ShoeType.giay.toShortString()) {
+        listGiay.add(element);
+      } else if (element.type == ShoeType.nhua.toShortString()) {
+        listNhua.add(element);
+      } else if (element.type == ShoeType.kim_loai.toShortString()) {
+        listKimLoai.add(element);
+      } else if (element.type == ShoeType.thuy_tinh.toShortString()) {
+        listThuytinh.add(element);
       } else {
         listGiayKhac.add(element);
       }

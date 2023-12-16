@@ -179,6 +179,25 @@ class _CustomerHomeScreen extends State<CustomerHomeScreen> {
                                         ),
                                       ),
                                 const Text(
+                                  "Thủy tinh",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14,
+                                      fontStyle: FontStyle.italic),
+                                ),
+                                productViewModel.listKimLoai.isNotEmpty
+                                    ? listShoeByType(
+                                        productViewModel.listThuytinh)
+                                    : Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          'Không có dữ liệu',
+                                          style: TextStyle(
+                                              fontSize: 12, color: Colors.grey),
+                                        ),
+                                      ),
+                                const Text(
                                   "Khác",
                                   style: TextStyle(
                                       color: Colors.black,
