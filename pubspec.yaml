@@ -49,6 +49,7 @@ dependencies:
   awesome_notifications_fcm: ^0.8.0
   dio: ^5.0.1
   badges: ^3.1.1
+  firebase_app_check: ^0.2.1+8
 
 dev_dependencies:
   flutter_test:
