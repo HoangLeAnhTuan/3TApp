@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:flutter/widgets.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:giaydep_app/model/shoe_type.dart';
 import 'package:rxdart/rxdart.dart';
@@ -16,6 +17,7 @@ import 'notification_viewmodel.dart';
 
 class ProductViewModel extends BaseViewModel {
   static final ProductViewModel _instance = ProductViewModel._internal();
+  TextEditingController searchBarController = TextEditingController();
 
   factory ProductViewModel() {
     return _instance;
@@ -135,4 +137,29 @@ class ProductViewModel extends BaseViewModel {
       }
     }
   }
+  Future<Product?> searchProduct(BuildContext context) async {
+  String searchTerm = searchBarController.text.trim();
+
+  if (searchTerm.isNotEmpty) {
+    try {
+      List<Product> searchResults = await productRepo.searchProducts(searchTerm);
+
+      if (searchResults.isNotEmpty) {
+        return searchResults.first;
+      } else {
+        CommonFunc.showToast("Không có kết quả tìm kiếm.");
+        return null;
+      }
+    } catch (error) {
+      print("searchProduct error: ${error.toString()}");
+      CommonFunc.showToast("Đã có lỗi xảy ra khi tìm kiếm.");
+      return null;
+    }
+  } else {
+    CommonFunc.showToast("Vui lòng nhập từ khóa tìm kiếm.");
+    return null;
+  }
+}
+
+  
 }

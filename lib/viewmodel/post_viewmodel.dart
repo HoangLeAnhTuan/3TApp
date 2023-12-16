@@ -68,7 +68,7 @@ class PostViewModel extends BaseViewModel {
     }
   }
 
-  //Dung sau: Khi muon biet ai da Like bai viet cua minh
+  // //Dung sau: Khi muon biet ai da Like bai viet cua minh
   // bool isPostMyLiked(Post post) {
   //   for (var element in post.userLiked) {
   //     if (element == currentUser?.email) {
