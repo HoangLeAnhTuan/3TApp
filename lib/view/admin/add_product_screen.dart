@@ -38,6 +38,7 @@ class _AddProductScreen extends State<AddProductScreen> {
     ShoeType.giay,
     ShoeType.nhua,
     ShoeType.kim_loai,
+    ShoeType.thuy_tinh,
     ShoeType.khac
   ];
 

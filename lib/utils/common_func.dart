@@ -63,10 +63,12 @@ class CommonFunc {
     switch (sendaType) {
       case "giay":
         return "Giấy";
-      case "da":
-        return "Da";
+      case "nhua":
+        return "Nhựa";
       case "kim_loai":
         return "Kim loại";
+      case "thuy_tinh":
+        return "Thủy tinh";
       default:
         return "Khác";
     }
@@ -80,6 +82,8 @@ class CommonFunc {
         return ShoeType.nhua;
       case "kim_loai":
         return ShoeType.kim_loai;
+      case "thuy_tinh":
+        return ShoeType.thuy_tinh;
       default:
         return ShoeType.khac;
     }

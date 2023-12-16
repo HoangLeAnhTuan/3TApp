@@ -50,6 +50,7 @@ class _EditProductScreen extends State<EditProductScreen> {
     ShoeType.giay,
     ShoeType.nhua,
     ShoeType.kim_loai,
+    ShoeType.thuy_tinh,
     ShoeType.khac
   ];
 
