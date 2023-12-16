@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:giaydep_app/main.dart';
-import 'package:giaydep_app/view/customer/cart/cart_screen.dart';
+import 'package:three_tapp_app/main.dart';
+import 'package:three_tapp_app/view/customer/cart/cart_screen.dart';
 
 import '../../../model/product.dart';
 import '../../../model/status.dart';
@@ -123,16 +123,16 @@ class _CustomerHomeScreen extends State<CustomerHomeScreen> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 const Text(
-                                  "Giày thể thao",
+                                  "Giấy",
                                   style: TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 14,
                                       fontStyle: FontStyle.italic),
                                 ),
-                                productViewModel.listTheThao.isNotEmpty
-                                    ? listShoeByType(
-                                        productViewModel.listTheThao)
+                                productViewModel.listGiay.isNotEmpty
+                                    ? listScrapByType(
+                                        productViewModel.listGiay)
                                     : Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: Text(
@@ -142,15 +142,15 @@ class _CustomerHomeScreen extends State<CustomerHomeScreen> {
                                         ),
                                       ),
                                 const Text(
-                                  "Giày da",
+                                  "Nhựa",
                                   style: TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 14,
                                       fontStyle: FontStyle.italic),
                                 ),
-                                productViewModel.listDa.isNotEmpty
-                                    ? listShoeByType(productViewModel.listDa)
+                                productViewModel.listNhua.isNotEmpty
+                                    ? listScrapByType(productViewModel.listNhua)
                                     : Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: Text(
@@ -160,16 +160,16 @@ class _CustomerHomeScreen extends State<CustomerHomeScreen> {
                                         ),
                                       ),
                                 const Text(
-                                  "Giày cao gót",
+                                  "Kim loại",
                                   style: TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 14,
                                       fontStyle: FontStyle.italic),
                                 ),
-                                productViewModel.listCaoGot.isNotEmpty
-                                    ? listShoeByType(
-                                        productViewModel.listCaoGot)
+                                productViewModel.listKimLoai.isNotEmpty
+                                    ? listScrapByType(
+                                        productViewModel.listKimLoai)
                                     : Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: Text(
@@ -179,15 +179,16 @@ class _CustomerHomeScreen extends State<CustomerHomeScreen> {
                                         ),
                                       ),
                                 const Text(
-                                  "Boot",
+                                  "Thủy tinh",
                                   style: TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 14,
                                       fontStyle: FontStyle.italic),
                                 ),
-                                productViewModel.listBoot.isNotEmpty
-                                    ? listShoeByType(productViewModel.listBoot)
+                                productViewModel.listKimLoai.isNotEmpty
+                                    ? listScrapByType(
+                                        productViewModel.listThuytinh)
                                     : Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: Text(
@@ -205,7 +206,7 @@ class _CustomerHomeScreen extends State<CustomerHomeScreen> {
                                       fontStyle: FontStyle.italic),
                                 ),
                                 productViewModel.listGiayKhac.isNotEmpty
-                                    ? listShoeByType(
+                                    ? listScrapByType(
                                         productViewModel.listGiayKhac)
                                     : Padding(
                                         padding: const EdgeInsets.all(8.0),
@@ -244,7 +245,7 @@ class _CustomerHomeScreen extends State<CustomerHomeScreen> {
     );
   }
 
-  Widget listShoeByType(List<Product> sendas) {
+  Widget listScrapByType(List<Product> sendas) {
     return SizedBox(
       height: 240,
       child: ListView.builder(

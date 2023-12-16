@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:giaydep_app/view/admin/product_management_screen.dart';
-import 'package:giaydep_app/view/admin/sales_management_screen.dart';
+import 'package:three_tapp_app/view/admin/product_management_screen.dart';
+import 'package:three_tapp_app/view/admin/sales_management_screen.dart';
 
 import '../../utils/common_func.dart';
 import '../customer/blogs/blogs_screen.dart';

@@ -7,7 +7,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../../model/product.dart';
-import '../../model/shoe_type.dart';
+import '../../model/scrap_type.dart';
 import '../../utils/common_func.dart';
 import '../../utils/image_path.dart';
 import '../../viewmodel/product_viewmodel.dart';
@@ -34,15 +34,15 @@ class _AddProductScreen extends State<AddProductScreen> {
     user = FirebaseAuth.instance.currentUser;
   }
 
-  List<ShoeType> productType = [
-    ShoeType.giay,
-    ShoeType.nhua,
-    ShoeType.kim_loai,
-    ShoeType.thuy_tinh,
-    ShoeType.khac
+  List<ScrapType> productType = [
+    ScrapType.giay,
+    ScrapType.nhua,
+    ScrapType.kim_loai,
+    ScrapType.thuy_tinh,
+    ScrapType.khac
   ];
 
-  ShoeType selectedType = ShoeType.khac;
+  ScrapType selectedType = ScrapType.khac;
 
   void reloadView() {
     setState(() {});
@@ -211,9 +211,9 @@ class _AddProductScreen extends State<AddProductScreen> {
                         child: Text("Loại:"),
                       ),
                       Spacer(),
-                      DropdownButton<ShoeType>(
-                        items: productType.map((ShoeType value) {
-                          return DropdownMenuItem<ShoeType>(
+                      DropdownButton<ScrapType>(
+                        items: productType.map((ScrapType value) {
+                          return DropdownMenuItem<ScrapType>(
                             value: value,
                             child: Text(CommonFunc.getSenDaNameByType(value.toShortString())),
                           );
@@ -223,7 +223,7 @@ class _AddProductScreen extends State<AddProductScreen> {
                           if (value != null) {
                             selectedType = value;
                           } else {
-                            selectedType = ShoeType.khac;
+                            selectedType = ScrapType.khac;
                           }
                           reloadView();
                         },

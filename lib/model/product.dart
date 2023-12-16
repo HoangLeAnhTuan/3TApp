@@ -1,5 +1,5 @@
 
-import 'package:giaydep_app/model/shoe_type.dart';
+import 'package:three_tapp_app/model/scrap_type.dart';
 
 class Product {
   String id = '';
@@ -7,7 +7,7 @@ class Product {
   String image = '';
   String description = '';
   double price = 0.0;
-  String type = ShoeType.khac.toShortString();
+  String type = ScrapType.khac.toShortString();
   String uploadBy = '';
   String uploadDate = DateTime.now().toString();
   String editDate = DateTime.now().toString();
@@ -29,7 +29,7 @@ class Product {
     image = '';
     description = '';
     price = 0.0;
-    type = ShoeType.khac.toShortString();
+    type = ScrapType.khac.toShortString();
     uploadBy = '';
     uploadDate = DateTime.now().toString();
     editDate = DateTime.now().toString();

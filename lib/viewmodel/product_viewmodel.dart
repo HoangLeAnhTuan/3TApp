@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:giaydep_app/model/shoe_type.dart';
+import 'package:three_tapp_app/model/scrap_type.dart';
 import 'package:rxdart/rxdart.dart';
 
 import '../base/baseviewmodel/base_viewmodel.dart';
@@ -28,10 +28,10 @@ class ProductViewModel extends BaseViewModel {
   RolesType rolesType = RolesType.none;
 
   List<Product> products = [];
-  List<Product> listTheThao = [];
-  List<Product> listDa = [];
-  List<Product> listCaoGot = [];
-  List<Product> listBoot = [];
+  List<Product> listGiay = [];
+  List<Product> listNhua = [];
+  List<Product> listKimLoai = [];
+  List<Product> listThuytinh = [];
   List<Product> listGiayKhac = [];
 
   final StreamController<Status> getProductController =
@@ -109,10 +109,10 @@ class ProductViewModel extends BaseViewModel {
   }
 
   void clearAllList() {
-    listTheThao.clear();
-    listDa.clear();
-    listCaoGot.clear();
-    listBoot.clear();
+    listGiay.clear();
+    listNhua.clear();
+    listKimLoai.clear();
+    listThuytinh.clear();
     listGiayKhac.clear();
   }
 
@@ -122,14 +122,14 @@ class ProductViewModel extends BaseViewModel {
 
     //filter
     for (var element in products) {
-      if (element.type == ShoeType.giay.toShortString()) {
-        listTheThao.add(element);
-      } else if (element.type == ShoeType.nhua.toShortString()) {
-        listDa.add(element);
-      } else if (element.type == ShoeType.kim_loai.toShortString()) {
-        listCaoGot.add(element);
-      } else if (element.type == ShoeType.thuy_tinh.toShortString()) {
-        listBoot.add(element);
+      if (element.type == ScrapType.giay.toShortString()) {
+        listGiay.add(element);
+      } else if (element.type == ScrapType.nhua.toShortString()) {
+        listNhua.add(element);
+      } else if (element.type == ScrapType.kim_loai.toShortString()) {
+        listKimLoai.add(element);
+      } else if (element.type == ScrapType.thuy_tinh.toShortString()) {
+        listThuytinh.add(element);
       } else {
         listGiayKhac.add(element);
       }

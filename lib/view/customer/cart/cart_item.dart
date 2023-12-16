@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:giaydep_app/main.dart';
-import 'package:giaydep_app/model/my_order.dart';
-import 'package:giaydep_app/model/order_status.dart';
-import 'package:giaydep_app/utils/common_func.dart';
-import 'package:giaydep_app/utils/image_path.dart';
-import 'package:giaydep_app/view/common_view/details_order_screen.dart';
-import 'package:giaydep_app/view/customer/order/edit_order_screen.dart';
-import 'package:giaydep_app/viewmodel/order_viewmodel.dart';
+import 'package:three_tapp_app/main.dart';
+import 'package:three_tapp_app/model/my_order.dart';
+import 'package:three_tapp_app/model/order_status.dart';
+import 'package:three_tapp_app/utils/common_func.dart';
+import 'package:three_tapp_app/utils/image_path.dart';
+import 'package:three_tapp_app/view/common_view/details_order_screen.dart';
+import 'package:three_tapp_app/view/customer/order/edit_order_screen.dart';
+import 'package:three_tapp_app/viewmodel/order_viewmodel.dart';
 
 class CartItem extends StatefulWidget {
   MyOrder order;
