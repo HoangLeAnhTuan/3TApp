@@ -122,13 +122,13 @@ class ProductViewModel extends BaseViewModel {
 
     //filter
     for (var element in products) {
-      if (element.type == ShoeType.the_thao.toShortString()) {
+      if (element.type == ShoeType.giay.toShortString()) {
         listTheThao.add(element);
-      } else if (element.type == ShoeType.da.toShortString()) {
+      } else if (element.type == ShoeType.nhua.toShortString()) {
         listDa.add(element);
-      } else if (element.type == ShoeType.cao_got.toShortString()) {
+      } else if (element.type == ShoeType.kim_loai.toShortString()) {
         listCaoGot.add(element);
-      } else if (element.type == ShoeType.phe_lieu.toShortString()) {
+      } else if (element.type == ShoeType.thuy_tinh.toShortString()) {
         listBoot.add(element);
       } else {
         listGiayKhac.add(element);
