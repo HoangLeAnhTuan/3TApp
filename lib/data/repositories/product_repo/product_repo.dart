@@ -8,4 +8,6 @@ abstract class ProductRepo {
   Future<bool> addProduct({required Product product, required File? imageFile});
   Future<bool> updateProduct({required Product product, required File? imageFile});
   Future<bool> deleteProduct({required String productId});
+  Future<List<Product>> searchProducts(String searchTerm);
+
 }

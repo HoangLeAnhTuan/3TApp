@@ -207,4 +207,25 @@ class ProductRepoImpl with ProductRepo {
     }
     return Future.value(false);
   }
+
+  Future<List<Product>> searchProducts(String searchTerm) async {
+    List<Product> searchResults = [];
+
+    try {
+      await FirebaseFirestore.instance
+          .collection("PRODUCTS")
+          .where("name", isGreaterThanOrEqualTo: searchTerm)
+          .where("name", isLessThan: searchTerm + "z")
+          .get()
+          .then((querySnapshot) {
+        for (var result in querySnapshot.docs) {
+          searchResults.add(Product.fromJson(result.data()));
+        }
+      });
+    } catch (error) {
+      print("searchProducts error: ${error.toString()}");
+    }
+
+    return searchResults;
+  }
 }

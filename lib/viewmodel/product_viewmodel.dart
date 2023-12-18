@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:three_tapp_app/model/scrap_type.dart';
 import 'package:rxdart/rxdart.dart';
@@ -16,6 +17,7 @@ import 'notification_viewmodel.dart';
 
 class ProductViewModel extends BaseViewModel {
   static final ProductViewModel _instance = ProductViewModel._internal();
+  TextEditingController searchBarController = TextEditingController();
 
   factory ProductViewModel() {
     return _instance;
@@ -95,6 +97,35 @@ class ProductViewModel extends BaseViewModel {
       print("update fail");
     });
   }
+
+  Future<List<Product>> searchProduct(BuildContext context) async {
+  String searchTerm = searchBarController.text.trim();
+  print("VM searchTerm: $searchTerm");
+
+  if (searchTerm.isNotEmpty) {
+    try {
+      List<Product> searchResults = await productRepo.searchProducts(searchTerm);
+
+      if (searchResults.isNotEmpty) {
+        print('Products found: ${searchResults.length}');
+        return searchResults;
+      } else {
+        print('No search results found.');
+        CommonFunc.showToast("Không có kết quả tìm kiếm.");
+        return [];
+      }
+    } catch (error) {
+      print("searchProduct error: ${error.toString()}");
+      CommonFunc.showToast("Đã có lỗi xảy ra khi tìm kiếm.");
+      return [];
+    }
+  } else {
+    print('Empty search term provided.');
+    CommonFunc.showToast("Vui lòng nhập từ khóa tìm kiếm(vm)");
+    return [];
+  }
+}
+
 
   void deleteProduct({required String productId}) {
     productRepo.deleteProduct(productId: productId).then((value) {

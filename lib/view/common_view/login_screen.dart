@@ -12,12 +12,11 @@ class LoginScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => _LoginScreen();
 }
+bool obscureText = true;
 
 class _LoginScreen extends State<LoginScreen> {
-  TextEditingController emailController =
-      TextEditingController();
-  TextEditingController passwordController =
-      TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
   FocusNode emailFocusNode = FocusNode();
   FocusNode passwordFocusNode = FocusNode();
   AuthViewModel authViewModel = AuthViewModel();
@@ -103,6 +102,8 @@ class _LoginScreen extends State<LoginScreen> {
                 controller: passwordController,
                 focusNode: passwordFocusNode,
                 keyboardType: TextInputType.text,
+                obscureText:
+                    obscureText, // Thêm dòng này để ẩn/hiển thị mật khẩu
                 decoration: InputDecoration(
                   contentPadding: const EdgeInsets.all(8),
                   labelText: "Mật khẩu",
@@ -115,6 +116,17 @@ class _LoginScreen extends State<LoginScreen> {
                   enabledBorder: OutlineInputBorder(
                     borderSide: const BorderSide(color: Colors.grey, width: 1),
                     borderRadius: BorderRadius.circular(12),
+                  ),
+                  suffixIcon: IconButton(
+                    icon: Icon(
+                      obscureText ? Icons.visibility : Icons.visibility_off,
+                      color: Colors.grey,
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        obscureText = !obscureText;
+                      });
+                    },
                   ),
                 ),
               ),

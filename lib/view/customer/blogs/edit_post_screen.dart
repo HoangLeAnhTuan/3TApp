@@ -69,7 +69,7 @@ class _EditPostScreen extends State<EditPostScreen> {
           backgroundColor: Colors.white,
           centerTitle: true,
           title: const Text(
-            "Cập  bài viết",
+            "Cập nhật bài viết",
             style: TextStyle(color: Colors.black),
           ),
           leading: IconButton(

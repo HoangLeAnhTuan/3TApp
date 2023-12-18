@@ -40,7 +40,7 @@ class _OrderItem extends State<OrderItem> {
       },
     );
     Widget processButton = TextButton(
-      child: Text("Đang xử lý"),
+      child: const Text("Đang xử lý"),
       onPressed: () async {
         await orderViewModel.updateOrderStatus(
             orderId: widget.order.id,
@@ -50,7 +50,7 @@ class _OrderItem extends State<OrderItem> {
     );
 
     Widget doneButton = TextButton(
-      child: Text("Đã xong"),
+      child: const Text("Đã xong"),
       onPressed: () async {
         await orderViewModel.updateOrderStatus(
             orderId: widget.order.id,
